@@ -1,172 +1,85 @@
-<!DOCTYPE html> 
-<html lang="uk"> 
-  <head> 
-    <meta charset="UTF-8"> 
-    <title>Ігровий Лаунчер - Структура HTML</title>
-    <link rel="stylesheet" href="style.css">
-  </head> 
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Темна ігрова бібліотека з улюбленими іграми та налаштуваннями."
+    />
+    <title>Game Space</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
   <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Бічна панель">
+        <button class="profile" type="button" aria-label="Відкрити профіль">
+          <span class="profile__avatar" aria-hidden="true">V</span>
+          <span class="profile__name">профіль</span>
+          <span class="profile__chevron" aria-hidden="true">⌄</span>
+        </button>
 
-<nav>
-    <div>
-        <span>[Аватар]</span>
-        <strong>профіль</strong>
+        <nav class="navigation" aria-label="Головна навігація">
+          <button class="navigation__item" type="button" data-page="home">
+            <span class="navigation__icon" aria-hidden="true">⌂</span>
+            <span>Головна</span>
+          </button>
+          <button class="navigation__item" type="button" data-page="library">
+            <span class="navigation__icon" aria-hidden="true">▦</span>
+            <span>Бібліотека</span>
+          </button>
+          <button class="navigation__item" type="button" data-page="wishlist">
+            <span class="navigation__icon" aria-hidden="true">♡</span>
+            <span>Бажане</span>
+          </button>
+          <button class="navigation__item" type="button" data-page="new">
+            <span class="navigation__icon" aria-hidden="true">✦</span>
+            <span>Новинки</span>
+          </button>
+          <button class="navigation__item" type="button" data-page="settings">
+            <span class="navigation__icon" aria-hidden="true">⚙</span>
+            <span>Налаштування</span>
+          </button>
+        </nav>
+
+        <div class="sidebar__footer">
+          <span class="status-dot" aria-hidden="true"></span>
+          Усі системи працюють
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <a class="brand" href="#" aria-label="Game Space — головна">
+            <span class="brand__mark" aria-hidden="true">G</span>
+            <span>GAME SPACE</span>
+          </a>
+          <label class="search">
+            <span class="search__icon" aria-hidden="true">⌕</span>
+            <span class="sr-only">Пошук ігор</span>
+            <input id="game-search" type="search" placeholder="Пошук ігор..." autocomplete="off" />
+            <kbd>⌘ K</kbd>
+          </label>
+          <button class="icon-button topbar__notifications" type="button" aria-label="Сповіщення">
+            ♧
+            <span class="notification-dot" aria-hidden="true"></span>
+          </button>
+        </header>
+
+        <section id="page-content" class="page-content" aria-live="polite"></section>
+      </main>
     </div>
-  
-    <ul>
-        <li><a href="#home">Головна</a></li>
-        <li><a href="#library">бібліотека</a></li>
-        <li><a href="#wishlist">бажане</a></li>
-        <li><a href="#news">новинки</a></li>
-        <li><a href="#settings">налаштування</a></li>
-    </ul>
-</nav>
 
-<hr> 
-
-
-<main>
-
-    
-    <section id="home">
-        <h2>Game of the week</h2>
-        
-        <div>
-            <div>[Зображення/Слайд 1]</div>
-            <div>[Зображення/Слайд 2]</div>
-            <div>[Зображення/Слайд 3]</div>
-            <div>[Зображення/Слайд Minecraft]</div>
-        </div>
-
-        <div>
-            <h3>Minecraft</h3>
-            <p>Minecraft - це всесвітньо відома пісочниця з відкритим світом, де весь світ складається з кубічних блоків. У грі немає чіткої мети, що дає гравцям повну свободу творчості.</p>
-            <button type="button">грати</button>
-        </div>
-    </section>
-
-    <hr>
-
-    <section id="library">
-        <h2>Бібліотека</h2>
-        
-        <div>
-            <label for="search-library">пошук:</label>
-            <input type="search" id="search-library" placeholder="Введіть назву...">
-        </div>
-
-        <div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-        </div>
-    </section>
-
-    <hr>
-
-    <section id="wishlist">
-        <h2>Бажані Ігри</h2>
-
-        <div>
-            <label for="search-wishlist">пошук:</label>
-            <input type="search" id="search-wishlist" placeholder="Введіть назву...">
-        </div>
-
-        <div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-        </div>
-    </section>
-
-    <hr>
-
-    <section id="news">
-        <h2>Новинки</h2>
-
-        <div>
-            <label for="search-news">пошук:</label>
-            <input type="search" id="search-news" placeholder="Введіть назву...">
-        </div>
-
-        <div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-            <div>назва гри </div>
-        </div>
-    </section>
-
-    <hr>
-
-    <section id="settings">
-        <h2>Налаштування</h2>
-
-        <div>
-            <h3>обрати мову</h3>
-            <button type="button">українська</button>
-            <button type="button">English</button>
-        </div>
-
-        <div>
-            <h3>обліковий запис</h3>
-            <button type="button">змінити пароль</button>
-            <button type="button">вийти</button>
-        </div>
-
-        <div>
-            <h3>регіон</h3>
-            <button type="button">Україна</button>
-            <button type="button">USA</button>
-        </div>
-
-        <div>
-            <h3>повноекранний режим</h3>
-            <button type="button">увімкнено</button>
-            <button type="button">вимкнено</button>
-        </div>
-
-        <div>
-            <h3>сповіщення</h3>
-            <ul>
-                <li><label><input type="checkbox" checked> новинки ігор</label></li>
-                <li><label><input type="checkbox" checked> знижки та акції</label></li>
-                <li><label><input type="checkbox"> новини друзів</label></li>
-                <li><label><input type="checkbox"> подарунки</label></li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>приватність</h3>
-            <ul>
-                <li>статус у мережі</li>
-                <li>список друзів</li>
-                <li>видимість профілю</li>
-            </ul>
-        </div>
-    </section>
-
-</main>
-
+    <dialog class="game-dialog" id="game-dialog">
+      <button class="game-dialog__close icon-button" type="button" aria-label="Закрити">×</button>
+      <div class="game-dialog__art game-art" id="dialog-art"></div>
+      <div class="game-dialog__content">
+        <p class="eyebrow">ІНФОРМАЦІЯ ПРО ГРУ</p>
+        <h2 id="dialog-title"></h2>
+        <p id="dialog-description"></p>
+        <button class="button button--primary" type="button" id="dialog-action">До бібліотеки</button>
+      </div>
+    </dialog>
   </body>
 </html>
-
-    
