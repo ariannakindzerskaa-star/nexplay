@@ -18,6 +18,50 @@
   --radius: 12px;
 }
 
+:root[data-accent="blue"] {
+  --accent: #68a7ff;
+  --accent-bright: #9bc5ff;
+  --sidebar: #15263d;
+  --surface: #1c304c;
+  --surface-raised: #254064;
+  --surface-hover: #2d4d77;
+}
+
+:root[data-accent="green"] {
+  --accent: #62d6a0;
+  --accent-bright: #9aebc2;
+  --sidebar: #16352e;
+  --surface: #1b4037;
+  --surface-raised: #245849;
+  --surface-hover: #2c6c57;
+}
+
+:root[data-density="compact"] .game-grid {
+  gap: 11px;
+}
+
+:root[data-density="compact"] .game-art {
+  min-height: 118px;
+}
+
+:root[data-density="compact"] .game-card__info {
+  padding: 9px 10px 10px;
+}
+
+:root[data-density="compact"] .navigation__item {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+:root[data-reduce-motion="true"] *,
+:root[data-reduce-motion="true"] *::before,
+:root[data-reduce-motion="true"] *::after {
+  scroll-behavior: auto !important;
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -509,6 +553,46 @@ h1 {
   background: #d8d9e8;
   box-shadow: -8px -26px 0 -3px #d8d9e8, 8px -26px 0 -3px #d8d9e8;
   clip-path: polygon(0 18%, 20% 0, 42% 18%, 58% 18%, 80% 0, 100% 18%, 88% 100%, 12% 100%);
+}
+
+.game-art--witcher {
+  background: radial-gradient(ellipse at 52% 56%, #ad6044 0, #633746 28%, transparent 58%), linear-gradient(145deg, #283b45, #15232f 62%, #10151c);
+}
+
+.game-art--witcher::before {
+  left: 43%;
+  bottom: -12%;
+  width: 48px;
+  height: 100px;
+  border: 2px solid #b7b9b2;
+  border-radius: 45% 45% 18% 18%;
+  background: linear-gradient(90deg, #d0d0c7 0 18%, #333a3a 19% 81%, #c3c4bc 82%);
+  clip-path: polygon(0 0, 38% 13%, 50% 0, 62% 13%, 100% 0, 85% 100%, 15% 100%);
+}
+
+.game-art--cyberpunk {
+  background: radial-gradient(ellipse at 76% 36%, #ffe84d 0 3%, transparent 4%), linear-gradient(135deg, #f34b82, #512d69 52%, #11152c);
+}
+
+.game-art--cyberpunk::before {
+  left: 42%;
+  bottom: -18%;
+  width: 63px;
+  height: 115px;
+  border: 2px solid #f7df55;
+  border-radius: 44% 44% 10% 10%;
+  background: linear-gradient(90deg, #27223b 0 34%, #db4b78 35% 65%, #27223b 66%);
+  clip-path: polygon(0 100%, 8% 30%, 30% 9%, 50% 0, 70% 9%, 92% 30%, 100% 100%);
+}
+
+.game-art--terraria {
+  background: linear-gradient(180deg, #76c9ed 0%, #b5e9ee 43%, #64a84d 44%, #3b6740 100%);
+}
+
+.game-art--terraria::before {
+  inset: 38% 0 0;
+  background: repeating-linear-gradient(90deg, #76523a 0 16px, #8b6543 17px 32px);
+  clip-path: polygon(0 22%, 22% 22%, 22% 0, 53% 0, 53% 22%, 77% 22%, 77% 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .game-card__tag {

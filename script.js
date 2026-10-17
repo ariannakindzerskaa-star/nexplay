@@ -47,6 +47,30 @@ const games = [
     art: "hollow",
     pages: ["library", "wishlist", "new"],
   },
+  {
+    id: "witcher",
+    name: "The Witcher 3: Wild Hunt",
+    price: "₴799",
+    rating: "4.9",
+    art: "witcher",
+    pages: ["library", "wishlist", "new"],
+  },
+  {
+    id: "cyberpunk",
+    name: "Cyberpunk 2077",
+    price: "₴999",
+    rating: "4.7",
+    art: "cyberpunk",
+    pages: ["library", "wishlist", "new"],
+  },
+  {
+    id: "terraria",
+    name: "Terraria",
+    price: "₴249",
+    rating: "4.8",
+    art: "terraria",
+    pages: ["library", "wishlist"],
+  },
 ];
 
 const translations = {
@@ -114,6 +138,7 @@ const translations = {
     langUk: "Українська",
     langEn: "English",
     langPl: "Polski",
+    langEs: "Español",
     region: "Регіон",
     regionUkraine: "Україна",
     regionEurope: "Європа",
@@ -125,6 +150,27 @@ const translations = {
     startupHint: "Game Space відкриватиметься після входу",
     online: "Показувати статус у мережі",
     onlineHint: "Друзі бачитимуть, коли ти граєш",
+    accentColor: "Колір акценту",
+    accentViolet: "Фіолетовий",
+    accentBlue: "Синій",
+    accentGreen: "Зелений",
+    density: "Щільність інтерфейсу",
+    densityComfortable: "Звичайна",
+    densityCompact: "Компактна",
+    reduceMotion: "Зменшити анімацію",
+    reduceMotionHint: "Скоротити тривалість анімацій та ефектів",
+    gameNews: "Оновлення ігор",
+    gameNewsHint: "Новини та оновлення ігор у бібліотеці",
+    friendActivity: "Активність друзів",
+    friendActivityHint: "Сповіщення про активність друзів",
+    wishlistOffers: "Пропозиції зі списку бажаного",
+    wishlistOffersHint: "Сповіщення про знижки на бажані ігри",
+    profileVisibility: "Видимість профілю",
+    visibilityPublic: "Усі",
+    visibilityFriends: "Друзі",
+    visibilityPrivate: "Лише я",
+    shareActivity: "Ділитися ігровою активністю",
+    shareActivityHint: "Дозволити друзям бачити нещодавно зіграні ігри",
     games: {
       minecraft: {
         genre: "Пісочниця · Пригоди",
@@ -155,6 +201,21 @@ const translations = {
         genre: "Метроїдванія · Екшн",
         label: "Пригода",
         description: "Відкрий підземне королівство комах, повне таємниць, небезпечних ворогів і прихованих шляхів.",
+      },
+      witcher: {
+        genre: "Рольова гра · Фентезі",
+        label: "Епічна пригода",
+        description: "Вирушай у подорож темним фентезійним світом у ролі Ґеральта з Рівії та шукай свою прийомну доньку.",
+      },
+      cyberpunk: {
+        genre: "Рольова гра · Наукова фантастика",
+        label: "Майбутнє вже тут",
+        description: "Досліджуй Найт-Сіті у ролі найманця V, змінюй своє тіло кіберімплантами та шукай шлях до безсмертя.",
+      },
+      terraria: {
+        genre: "Пісочниця · Пригоди",
+        label: "Копай і досліджуй",
+        description: "Копай, створюй спорядження та досліджуй мінливий світ, сповнений скарбів і небезпек.",
       },
     },
   },
@@ -222,6 +283,7 @@ const translations = {
     langUk: "Українська",
     langEn: "English",
     langPl: "Polski",
+    langEs: "Español",
     region: "Region",
     regionUkraine: "Ukraine",
     regionEurope: "Europe",
@@ -233,6 +295,27 @@ const translations = {
     startupHint: "Game Space opens when you sign in",
     online: "Show online status",
     onlineHint: "Friends can see when you are playing",
+    accentColor: "Accent color",
+    accentViolet: "Violet",
+    accentBlue: "Blue",
+    accentGreen: "Green",
+    density: "Interface density",
+    densityComfortable: "Comfortable",
+    densityCompact: "Compact",
+    reduceMotion: "Reduce motion",
+    reduceMotionHint: "Shorten animations and visual effects",
+    gameNews: "Game updates",
+    gameNewsHint: "News and updates for games in your library",
+    friendActivity: "Friend activity",
+    friendActivityHint: "Notifications about your friends' activity",
+    wishlistOffers: "Wishlist offers",
+    wishlistOffersHint: "Discount alerts for games on your wishlist",
+    profileVisibility: "Profile visibility",
+    visibilityPublic: "Everyone",
+    visibilityFriends: "Friends",
+    visibilityPrivate: "Only me",
+    shareActivity: "Share gaming activity",
+    shareActivityHint: "Let friends see the games you played recently",
     games: {
       minecraft: {
         genre: "Sandbox · Adventure",
@@ -263,6 +346,21 @@ const translations = {
         genre: "Metroidvania · Action",
         label: "Adventure",
         description: "Explore an underground insect kingdom full of secrets, dangerous foes, and hidden paths.",
+      },
+      witcher: {
+        genre: "RPG · Fantasy",
+        label: "Epic adventure",
+        description: "Travel a dark fantasy world as Geralt of Rivia and search for your adopted daughter.",
+      },
+      cyberpunk: {
+        genre: "RPG · Sci-fi",
+        label: "The future is now",
+        description: "Explore Night City as mercenary V, enhance your body with cyberware, and search for a way to live forever.",
+      },
+      terraria: {
+        genre: "Sandbox · Adventure",
+        label: "Dig and explore",
+        description: "Dig, craft your gear, and explore an ever-changing world full of treasure and danger.",
       },
     },
   },
@@ -330,6 +428,7 @@ const translations = {
     langUk: "Українська",
     langEn: "English",
     langPl: "Polski",
+    langEs: "Hiszpański",
     region: "Region",
     regionUkraine: "Ukraina",
     regionEurope: "Europa",
@@ -341,6 +440,27 @@ const translations = {
     startupHint: "Game Space otworzy się po zalogowaniu",
     online: "Pokazuj status online",
     onlineHint: "Znajomi zobaczą, kiedy grasz",
+    accentColor: "Kolor akcentu",
+    accentViolet: "Fioletowy",
+    accentBlue: "Niebieski",
+    accentGreen: "Zielony",
+    density: "Gęstość interfejsu",
+    densityComfortable: "Standardowa",
+    densityCompact: "Kompaktowa",
+    reduceMotion: "Ogranicz animacje",
+    reduceMotionHint: "Skróć animacje i efekty wizualne",
+    gameNews: "Aktualizacje gier",
+    gameNewsHint: "Wiadomości i aktualizacje gier w bibliotece",
+    friendActivity: "Aktywność znajomych",
+    friendActivityHint: "Powiadomienia o aktywności znajomych",
+    wishlistOffers: "Oferty z listy życzeń",
+    wishlistOffersHint: "Powiadomienia o zniżkach na gry z listy życzeń",
+    profileVisibility: "Widoczność profilu",
+    visibilityPublic: "Wszyscy",
+    visibilityFriends: "Znajomi",
+    visibilityPrivate: "Tylko ja",
+    shareActivity: "Udostępniaj aktywność w grach",
+    shareActivityHint: "Pozwól znajomym widzieć ostatnio uruchomione gry",
     games: {
       minecraft: {
         genre: "Sandbox · Przygodowa",
@@ -364,13 +484,173 @@ const translations = {
       },
       celeste: {
         genre: "Platformowa · Indie",
-        label: "Indyjski hit",
+        label: "Niezależny hit",
         description: "Pomóż Madeline zdobyć górę Celeste w precyzyjnej platformówce o wytrwałości i odwadze.",
       },
       hollow: {
         genre: "Metroidvania · Akcja",
         label: "Przygoda",
         description: "Odkryj podziemne królestwo owadów pełne tajemnic, niebezpiecznych wrogów i ukrytych ścieżek.",
+      },
+      witcher: {
+        genre: "Gra fabularna · Fantasy",
+        label: "Epicka przygoda",
+        description: "Wyrusz w podróż po mrocznym świecie fantasy jako Geralt z Rivii i odnajdź swoją przybraną córkę.",
+      },
+      cyberpunk: {
+        genre: "Gra fabularna · Science fiction",
+        label: "Przyszłość jest teraz",
+        description: "Odkrywaj Night City jako najemnik V, ulepszaj ciało cyberwszczepami i szukaj drogi do nieśmiertelności.",
+      },
+      terraria: {
+        genre: "Sandbox · Przygodowa",
+        label: "Kop i odkrywaj",
+        description: "Kop, twórz wyposażenie i odkrywaj zmienny świat pełen skarbów oraz niebezpieczeństw.",
+      },
+    },
+  },
+  es: {
+    appTitle: "Game Space",
+    appDescription: "Una biblioteca oscura de videojuegos con tus juegos y ajustes favoritos.",
+    profile: "perfil",
+    sidebar: "Barra lateral",
+    openProfile: "Abrir perfil",
+    navigation: "Navegación principal",
+    navHome: "Inicio",
+    navLibrary: "Biblioteca",
+    navWishlist: "Lista de deseos",
+    navNew: "Novedades",
+    navSettings: "Ajustes",
+    status: "Todos los sistemas funcionan",
+    brandLabel: "Game Space — inicio",
+    searchLabel: "Buscar juegos",
+    searchPlaceholder: "Buscar juegos...",
+    notifications: "Notificaciones",
+    close: "Cerrar",
+    dialogEyebrow: "INFORMACIÓN DEL JUEGO",
+    libraryAction: "Ir a la biblioteca",
+    detailsAboutGame: "Más información sobre",
+    favoriteAdd: "Añadir a la lista de deseos:",
+    favoriteRemove: "Quitar de la lista de deseos:",
+    rating: "Valoración: {rating} de 5",
+    view: "Ver",
+    home: "Inicio",
+    homeSubtitle: "Tu próxima gran aventura empieza aquí.",
+    welcome: "QUÉ ALEGRÍA VERTE DE NUEVO",
+    weeklyGame: "JUEGO DE LA SEMANA",
+    viewGame: "Ver juego",
+    communityChoice: "Favorito de la comunidad",
+    adventure: "Aventura",
+    recommendations: "Recomendaciones para ti",
+    allNew: "Todas las novedades →",
+    library: "Biblioteca",
+    librarySubtitle: "Todos tus juegos en un solo lugar.",
+    yourGames: "TUS JUEGOS",
+    wishlist: "Lista de deseos",
+    wishlistSubtitle: "Juegos a los que querrás volver.",
+    wishlistEyebrow: "TU LISTA DE DESEOS",
+    new: "Novedades",
+    newSubtitle: "Juegos nuevos y grandes descubrimientos.",
+    newEyebrow: "NOVEDADES",
+    gameOne: "juego",
+    gameFew: "juegos",
+    gameMany: "juegos",
+    emptyWishlist: "Tu lista está vacía. Añade un juego pulsando su estrella.",
+    emptySearch: "Prueba con otra búsqueda.",
+    settings: "Ajustes",
+    settingsSubtitle: "Personaliza Game Space a tu gusto.",
+    yourProfile: "TU PERFIL",
+    settingsSections: "Secciones de ajustes",
+    tabGeneral: "General",
+    tabInterface: "Interfaz",
+    tabNotifications: "Notificaciones",
+    tabPrivacy: "Privacidad",
+    generalSettings: "Ajustes generales",
+    interfaceSettings: "Ajustes de interfaz",
+    notificationsSettings: "Ajustes de notificaciones",
+    privacySettings: "Ajustes de privacidad",
+    language: "Idioma",
+    langUk: "Ucraniano",
+    langEn: "Inglés",
+    langPl: "Polaco",
+    langEs: "Español",
+    region: "Región",
+    regionUkraine: "Ucrania",
+    regionEurope: "Europa",
+    regionUsa: "Estados Unidos",
+    account: "Cuenta",
+    playerAccount: "Perfil de jugador · varen",
+    manageAccount: "Gestionar cuenta",
+    startup: "Iniciar con el sistema",
+    startupHint: "Game Space se abrirá al iniciar sesión",
+    online: "Mostrar estado en línea",
+    onlineHint: "Tus amigos podrán ver cuándo estás jugando",
+    accentColor: "Color de énfasis",
+    accentViolet: "Violeta",
+    accentBlue: "Azul",
+    accentGreen: "Verde",
+    density: "Densidad de la interfaz",
+    densityComfortable: "Cómoda",
+    densityCompact: "Compacta",
+    reduceMotion: "Reducir movimiento",
+    reduceMotionHint: "Reducir la duración de animaciones y efectos",
+    gameNews: "Actualizaciones de juegos",
+    gameNewsHint: "Novedades y actualizaciones de los juegos de tu biblioteca",
+    friendActivity: "Actividad de amigos",
+    friendActivityHint: "Notificaciones sobre la actividad de tus amigos",
+    wishlistOffers: "Ofertas de la lista de deseos",
+    wishlistOffersHint: "Avisos de descuentos en juegos de tu lista",
+    profileVisibility: "Visibilidad del perfil",
+    visibilityPublic: "Todo el mundo",
+    visibilityFriends: "Amigos",
+    visibilityPrivate: "Solo yo",
+    shareActivity: "Compartir actividad de juego",
+    shareActivityHint: "Permitir que tus amigos vean a qué has jugado recientemente",
+    games: {
+      minecraft: {
+        genre: "Sandbox · Aventura",
+        label: "Popular",
+        description: "Explora un mundo infinito, construye todo lo que imagines y vive aventuras con tus amigos.",
+      },
+      stardew: {
+        genre: "Simulación · Indie",
+        label: "Recomendación",
+        description: "Empieza una nueva vida en la granja: cultiva, conoce a los habitantes del valle y descubre sus secretos.",
+      },
+      hades: {
+        genre: "Acción · Roguelike",
+        label: "Selección del editor",
+        description: "Desafía al dios de los muertos en una aventura trepidante donde cada intento revela una nueva historia.",
+      },
+      portal: {
+        genre: "Puzles · Aventura",
+        label: "Clásico",
+        description: "Resuelve ingeniosos puzles con un dispositivo de portales y pon a prueba tus habilidades.",
+      },
+      celeste: {
+        genre: "Plataformas · Indie",
+        label: "Éxito indie",
+        description: "Ayuda a Madeline a escalar la montaña Celeste en un preciso juego de plataformas sobre la perseverancia y el valor.",
+      },
+      hollow: {
+        genre: "Metroidvania · Acción",
+        label: "Aventura",
+        description: "Explora un reino subterráneo de insectos lleno de secretos, enemigos peligrosos y caminos ocultos.",
+      },
+      witcher: {
+        genre: "Rol · Fantasía",
+        label: "Aventura épica",
+        description: "Recorre un oscuro mundo de fantasía como Geralt de Rivia y busca a tu hija adoptiva.",
+      },
+      cyberpunk: {
+        genre: "Rol · Ciencia ficción",
+        label: "El futuro ya está aquí",
+        description: "Explora Night City como V, mejora tu cuerpo con implantes cibernéticos y busca la forma de alcanzar la inmortalidad.",
+      },
+      terraria: {
+        genre: "Sandbox · Aventura",
+        label: "Excava y explora",
+        description: "Excava, fabrica tu equipo y explora un mundo cambiante lleno de tesoros y peligros.",
       },
     },
   },
@@ -382,6 +662,7 @@ const languageAliases = {
   Українська: "uk",
   English: "en",
   Polski: "pl",
+  Español: "es",
 };
 const settingAliases = {
   language: languageAliases,
@@ -411,6 +692,19 @@ function applyDocumentTranslations() {
   });
 }
 
+function applyInterfacePreferences() {
+  const settings = readStoredSettings();
+  const accents = ["violet", "blue", "green"];
+  const densities = ["comfortable", "compact"];
+  document.documentElement.dataset.accent = accents.includes(settings.accent)
+    ? settings.accent
+    : "violet";
+  document.documentElement.dataset.density = densities.includes(settings.density)
+    ? settings.density
+    : "comfortable";
+  document.documentElement.dataset.reduceMotion = String(settings.reduceMotion === true);
+}
+
 const pageContent = document.querySelector("#page-content");
 const searchInput = document.querySelector("#game-search");
 const navigation = document.querySelector(".navigation");
@@ -420,6 +714,7 @@ const dialogDescription = document.querySelector("#dialog-description");
 const dialogArt = document.querySelector("#dialog-art");
 const favoriteIds = new Set(readStoredFavorites());
 let activePage = "home";
+let activeSettingsTab = "general";
 let searchQuery = "";
 
 function readStoredFavorites() {
@@ -562,59 +857,132 @@ function renderHome() {
   `;
 }
 
+function settingToggle(setting, label, hint, checked = false) {
+  return `
+    <div class="toggle-row">
+      <span>${t(label)}<small>${t(hint)}</small></span>
+      <label class="switch">
+        <input type="checkbox" data-setting="${setting}"${checked ? " checked" : ""} />
+        <span class="switch__track"></span>
+      </label>
+    </div>
+  `;
+}
+
+function settingSelect(setting, label, options) {
+  return `
+    <label class="setting-field">
+      ${t(label)}
+      <select data-setting="${setting}">
+        ${options.map(([value, key]) => `<option value="${value}">${t(key)}</option>`).join("")}
+      </select>
+    </label>
+  `;
+}
+
+function renderSettingsPanel() {
+  const headings = {
+    general: "generalSettings",
+    interface: "interfaceSettings",
+    notifications: "notificationsSettings",
+    privacy: "privacySettings",
+  };
+  let content = "";
+
+  if (activeSettingsTab === "general") {
+    content = `
+      <div class="settings-grid">
+        ${settingSelect("language", "language", [
+          ["uk", "langUk"],
+          ["en", "langEn"],
+          ["pl", "langPl"],
+          ["es", "langEs"],
+        ])}
+        ${settingSelect("region", "region", [
+          ["ukraine", "regionUkraine"],
+          ["europe", "regionEurope"],
+          ["usa", "regionUsa"],
+        ])}
+        ${settingSelect("account", "account", [
+          ["player", "playerAccount"],
+          ["manage", "manageAccount"],
+        ])}
+      </div>
+      <div class="settings-divider"></div>
+      ${settingToggle("startup", "startup", "startupHint")}
+    `;
+  } else if (activeSettingsTab === "interface") {
+    content = `
+      <div class="settings-grid">
+        ${settingSelect("accent", "accentColor", [
+          ["violet", "accentViolet"],
+          ["blue", "accentBlue"],
+          ["green", "accentGreen"],
+        ])}
+        ${settingSelect("density", "density", [
+          ["comfortable", "densityComfortable"],
+          ["compact", "densityCompact"],
+        ])}
+      </div>
+      <div class="settings-divider"></div>
+      ${settingToggle("reduceMotion", "reduceMotion", "reduceMotionHint")}
+    `;
+  } else if (activeSettingsTab === "notifications") {
+    content = `
+      ${settingToggle("notifyGameNews", "gameNews", "gameNewsHint", true)}
+      ${settingToggle("notifyFriendActivity", "friendActivity", "friendActivityHint", true)}
+      ${settingToggle("notifyWishlistOffers", "wishlistOffers", "wishlistOffersHint")}
+    `;
+  } else {
+    content = `
+      <div class="settings-grid">
+        ${settingSelect("profileVisibility", "profileVisibility", [
+          ["public", "visibilityPublic"],
+          ["friends", "visibilityFriends"],
+          ["private", "visibilityPrivate"],
+        ])}
+      </div>
+      <div class="settings-divider"></div>
+      ${settingToggle("online", "online", "onlineHint", true)}
+      ${settingToggle("shareActivity", "shareActivity", "shareActivityHint")}
+    `;
+  }
+
+  return `<section class="settings-panel"><h2>${t(headings[activeSettingsTab])}</h2>${content}</section>`;
+}
+
 function renderSettings() {
+  const tabs = [
+    ["general", "tabGeneral"],
+    ["interface", "tabInterface"],
+    ["notifications", "tabNotifications"],
+    ["privacy", "tabPrivacy"],
+  ];
   return `
     ${heading(t("settings"), t("settingsSubtitle"), t("yourProfile"))}
     <div class="settings-layout">
       <nav class="settings-tabs" aria-label="${t("settingsSections")}">
-        <button class="settings-tab is-active" type="button" data-settings-tab="general">${t("tabGeneral")}</button>
-        <button class="settings-tab" type="button" data-settings-tab="interface">${t("tabInterface")}</button>
-        <button class="settings-tab" type="button" data-settings-tab="notifications">${t("tabNotifications")}</button>
-        <button class="settings-tab" type="button" data-settings-tab="privacy">${t("tabPrivacy")}</button>
+        ${tabs
+          .map(
+            ([tab, label]) => `
+              <button
+                class="settings-tab${activeSettingsTab === tab ? " is-active" : ""}"
+                type="button"
+                data-settings-tab="${tab}"
+                aria-selected="${activeSettingsTab === tab}"
+              >${t(label)}</button>
+            `,
+          )
+          .join("")}
       </nav>
-      <section class="settings-panel">
-        <h2>${t("generalSettings")}</h2>
-        <div class="settings-grid">
-          <label class="setting-field">
-            ${t("language")}
-            <select data-setting="language">
-              <option value="uk">${t("langUk")}</option>
-              <option value="en">${t("langEn")}</option>
-              <option value="pl">${t("langPl")}</option>
-            </select>
-          </label>
-          <label class="setting-field">
-            ${t("region")}
-            <select data-setting="region">
-              <option value="ukraine">${t("regionUkraine")}</option>
-              <option value="europe">${t("regionEurope")}</option>
-              <option value="usa">${t("regionUsa")}</option>
-            </select>
-          </label>
-          <label class="setting-field setting-field--wide">
-            ${t("account")}
-            <select data-setting="account">
-              <option value="player">${t("playerAccount")}</option>
-              <option value="manage">${t("manageAccount")}</option>
-            </select>
-          </label>
-        </div>
-        <div class="settings-divider"></div>
-        <div class="toggle-row">
-          <span>${t("startup")}<small>${t("startupHint")}</small></span>
-          <label class="switch"><input type="checkbox" data-setting="startup" /><span class="switch__track"></span></label>
-        </div>
-        <div class="toggle-row">
-          <span>${t("online")}<small>${t("onlineHint")}</small></span>
-          <label class="switch"><input type="checkbox" data-setting="online" checked /><span class="switch__track"></span></label>
-        </div>
-      </section>
+      ${renderSettingsPanel()}
     </div>
   `;
 }
 
 function render() {
   applyDocumentTranslations();
+  applyInterfacePreferences();
   document.querySelectorAll(".navigation__item").forEach((item) => {
     item.classList.toggle("is-active", item.dataset.page === activePage);
     if (item.dataset.page === activePage) {
@@ -720,16 +1088,9 @@ pageContent.addEventListener("click", (event) => {
 
   const tab = event.target.closest("[data-settings-tab]");
   if (tab) {
-    pageContent.querySelectorAll("[data-settings-tab]").forEach((item) => {
-      item.classList.toggle("is-active", item === tab);
-    });
-    const headings = {
-      general: "generalSettings",
-      interface: "interfaceSettings",
-      notifications: "notificationsSettings",
-      privacy: "privacySettings",
-    };
-    pageContent.querySelector(".settings-panel h2").textContent = t(headings[tab.dataset.settingsTab]);
+    activeSettingsTab = tab.dataset.settingsTab;
+    render();
+    return;
   }
 });
 
@@ -749,6 +1110,9 @@ pageContent.addEventListener("change", (event) => {
     console.warn("Не вдалося зберегти налаштування.", error);
   }
 
+  if (["accent", "density", "reduceMotion"].includes(settingName)) {
+    applyInterfacePreferences();
+  }
   if (settingName === "language") render();
 });
 
