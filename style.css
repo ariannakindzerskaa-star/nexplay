@@ -135,7 +135,175 @@ main section input[type="text"] {
   font-size: 16px; 
 }
 
+.minecraft-block, 
+#home > div:last-of-type { 
+  background-color: rgba(75, 50, 148, 0.4); 
+  border: 2px solid #6346bf; 
+  border-radius: 10px; 
+  padding: 30px; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  gap: 40px; 
+} 
 
+.minecraft-block h3, 
+#home > div:last-of-type h3 { 
+  font-size: 24px; 
+  margin-bottom: 10px; 
+} 
+
+.minecraft-block p, 
+#home > div:last-of-type p { 
+  font-size: 15px; 
+  color: #d1c4e9; 
+  line-height: 1.5; 
+  max-width: 650px; 
+}
+
+.minecraft-block button,
+#home button {
+    background-color: #4b3294;
+    color: #ffffff;
+    border: 2px solid #fffb8f;
+    padding: 12px 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.minecraft-block button:hover,
+#home button:hover {
+    background-color: #6346bf;
+}
+
+.games-grid,
+#library > div:last-of-type,
+#wishlist > div:last-of-type,
+#news > div:last-of-type {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Рівно 3 колонки в ряд як на фото */
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.games-grid div,
+#library > div:last-of-type div,
+#wishlist > div:last-of-type div,
+#news > div:last-of-type div {
+    background-color: #4b3294;
+    border: 2px solid #6346bf;
+    border-radius: 8px;
+    height: 160px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.games-grid div::after,
+#library > div:last-of-type div::after,
+#wishlist > div:last-of-type div::after,
+#news > div:last-of-type div::after {
+    content: "★";
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    color: #fffb8f;
+    font-size: 18px;
+}
+
+.settings-grid,
+#settings {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 30px;
+}
+
+#settings h2 {
+    grid-column: 1 / -1;
+    margin-bottom: 10px;
+}
+
+.settings-card,
+#settings > div {
+    background-color: #4b3294;
+    border: 2px solid #6346bf;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.settings-card h3,
+#settings h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #311b5e;
+    padding-bottom: 8px;
+}
+
+.settings-card button,
+#settings button {
+    background-color: #311b5e;
+    border: 2px solid #6346bf;
+    color: #ffffff;
+    padding: 8px 20px;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.settings-card button.selected,
+#settings button:first-of-type {
+    background-color: #6346bf;
+    border-color: #fffb8f;
+}
+
+.settings-card ul,
+#settings ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.settings-card ul li label,
+#settings ul li label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.settings-card input[type="checkbox"],
+#settings input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #6346bf;
+    cursor: pointer;
+}
+
+.privacy-list li,
+#settings div:last-of-type ul li {
+    font-size: 16px;
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: space-between;
+}
+
+#settings div:last-of-type ul li:nth-child(1)::after { content: "видимий"; color: #fffb8f; }
+#settings div:last-of-type ul li:nth-child(2)::after { content: "приватний"; color: #fffb8f; }
+#settings div:last-of-type ul li:nth-child(3)::after { content: "для всіх"; color: #fffb8f; }
 
   </style>
 </head>
