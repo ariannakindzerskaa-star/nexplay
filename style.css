@@ -1,167 +1,150 @@
 <head>
-  <style>
+<style>
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-famile: 'Segoe UI';
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
 
 body {
-  background-color: #27194F;
-  color: #ffffff;
-  display: flex;
-  height: 100hv;
-  overflow: hidden;
+    background-color: #1a0933;
+    color: #ffffff;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
 }
 
 hr {
-  display: none;
+    display: none; 
 }
 
-nav { width: 260px; 
-     background-color: #4b3294;
-     padding: 30px 20px;
-     display: flex; 
-     flex-direction: column; 
-     gap: 30px; 
-     flex-shrink: 0; 
-    }
+nav {
+    width: 260px;
+    background-color: #4b3294;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex-shrink: 0;
+}
+
+nav > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #311b5e;
+}
 
 nav > div span {
-  width: 45px;
-  height: 45px;
-  background-color: #fffb8f;
-  border-radius: 50%;
-  display: inline-block;
+    width: 45px;
+    height: 45px;
+    background-color: #fffb8f;
+    border-radius: 50%;
+    display: inline-block;
 }
 
-nav >div strong {
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: 0.5 px;
+nav > div strong {
+    font-size: 20px;
+    font-weight: 500;
 }
 
-nav ul { 
-list-style: none;
-display: flex;
-flex-direction: column; 
-gap: 8px; 
-} 
-
-nav ul li a,
-nav ul li button {
-display: block; 
-width: 100%; 
-text-align: left; 
-background: none; 
-border: none; 
-color: #ffffff; 
-text-decoration: none; 
-padding: 14px 18px; 
-font-size: 18px; 
-border-radius: 6px; 
-cursor: pointer; 
-transition: background-color 0.2s,color 0.2s; 
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-nav ul li a:hover,
-nav ul li a button:hover,
-nav ul li .active {
-  background-color: #6346bf;
+nav ul li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 18px;
+    font-size: 18px;
+    border-radius: 6px;
 }
 
-main { 
-  flex: 1; 
-  background-color: #311b5e; 
-  padding: 40px; overflow-y: auto; 
-} 
-main section h2 { 
-  font-size: 32px; 
-  font-weight: 600; 
-  margin-bottom: 25px; 
+nav ul li a:hover {
+    background-color: #6346bf;
 }
 
-.search-container,
+main {
+    flex: 1;
+    background-color: #311b5e;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+main section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
 main section > div:has(input) {
-  display: flex; 
-  align-items: center; 
-  gap: 15px; 
-  margin-bottom: 25px; 
-} 
-
-main section label { 
-  font-size: 18px; 
-  color: #ffffff; 
-} 
-
-main section input[type="search"],
-main section input[type="text"] { 
-  background-color: #1a0933; 
-  border: 2px solid #6346bf; 
-  border-radius: 6px; 
-  padding: 10px 15px; 
-  color: #ffffff; 
-  width: 280px; 
-  font-size: 16px; 
-  outline: none; 
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
 }
 
-.screen {
-  display: none;
+main section label {
+    font-size: 18px;
 }
 
-.screen.active-screen {
-  display: block;
+main section input {
+    background-color: #1a0933;
+    border: 2px solid #6346bf;
+    border-radius: 6px;
+    padding: 10px 15px;
+    color: #ffffff;
+    width: 280px;
+    font-size: 16px;
+    outline: none;
 }
 
-.promo-grid, 
-#home > div:first-of-type { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
-  gap: 20px; 
-  margin-bottom: 30px; 
-} 
-.promo-grid div, 
-#home > div:first-of-type div { 
-  background-color: #4b3294; 
-  border: 2px solid #6346bf; 
-  border-radius: 8px; 
-  height: 150px; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  font-weight: bold; 
-  font-size: 16px; 
+#home > div:first-of-type {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
 }
 
-.minecraft-block, 
-#home > div:last-of-type { 
-  background-color: rgba(75, 50, 148, 0.4); 
-  border: 2px solid #6346bf; 
-  border-radius: 10px; 
-  padding: 30px; 
-  display: flex; 
-  justify-content: space-between; 
-  align-items: center; 
-  gap: 40px; 
-} 
-
-.minecraft-block h3, 
-#home > div:last-of-type h3 { 
-  font-size: 24px; 
-  margin-bottom: 10px; 
-} 
-
-.minecraft-block p, 
-#home > div:last-of-type p { 
-  font-size: 15px; 
-  color: #d1c4e9; 
-  line-height: 1.5; 
-  max-width: 650px; 
+#home > div:first-of-type div {
+    background-color: #4b3294;
+    border: 2px solid #6346bf;
+    border-radius: 8px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
 }
 
-.minecraft-block button,
+#home > div:last-of-type {
+    background-color: rgba(75, 50, 148, 0.4);
+    border: 2px solid #6346bf;
+    border-radius: 10px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+#home > div:last-of-type h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#home > div:last-of-type p {
+    font-size: 15px;
+    color: #d1c4e9;
+    line-height: 1.5;
+    max-width: 650px;
+}
+
 #home button {
     background-color: #4b3294;
     color: #ffffff;
@@ -171,25 +154,16 @@ main section input[type="text"] {
     font-weight: bold;
     border-radius: 6px;
     cursor: pointer;
-    transition: background-color 0.2s;
 }
 
-.minecraft-block button:hover,
-#home button:hover {
-    background-color: #6346bf;
-}
-
-.games-grid,
 #library > div:last-of-type,
 #wishlist > div:last-of-type,
 #news > div:last-of-type {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Рівно 3 колонки в ряд як на фото */
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-    margin-top: 20px;
 }
 
-.games-grid div,
 #library > div:last-of-type div,
 #wishlist > div:last-of-type div,
 #news > div:last-of-type div {
@@ -199,14 +173,12 @@ main section input[type="text"] {
     height: 160px;
     padding: 20px;
     font-size: 16px;
-    font-weight: 500;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
 }
 
-.games-grid div::after,
 #library > div:last-of-type div::after,
 #wishlist > div:last-of-type div::after,
 #news > div:last-of-type div::after {
@@ -218,19 +190,16 @@ main section input[type="text"] {
     font-size: 18px;
 }
 
-.settings-grid,
 #settings {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
 
 #settings h2 {
     grid-column: 1 / -1;
-    margin-bottom: 10px;
 }
 
-.settings-card,
 #settings > div {
     background-color: #4b3294;
     border: 2px solid #6346bf;
@@ -238,16 +207,13 @@ main section input[type="text"] {
     padding: 25px;
 }
 
-.settings-card h3,
 #settings h3 {
     font-size: 18px;
-    font-weight: 600;
     margin-bottom: 20px;
     border-bottom: 2px solid #311b5e;
     padding-bottom: 8px;
 }
 
-.settings-card button,
 #settings button {
     background-color: #311b5e;
     border: 2px solid #6346bf;
@@ -258,16 +224,13 @@ main section input[type="text"] {
     cursor: pointer;
     margin-right: 10px;
     margin-bottom: 10px;
-    transition: background-color 0.2s, border-color 0.2s;
 }
 
-.settings-card button.selected,
 #settings button:first-of-type {
     background-color: #6346bf;
     border-color: #fffb8f;
 }
 
-.settings-card ul,
 #settings ul {
     list-style: none;
     display: flex;
@@ -275,35 +238,18 @@ main section input[type="text"] {
     gap: 15px;
 }
 
-.settings-card ul li label,
 #settings ul li label {
     display: flex;
     align-items: center;
     gap: 12px;
     cursor: pointer;
-    font-size: 16px;
 }
 
-.settings-card input[type="checkbox"],
 #settings input[type="checkbox"] {
     width: 18px;
     height: 18px;
     accent-color: #6346bf;
-    cursor: pointer;
 }
 
-.privacy-list li,
-#settings div:last-of-type ul li {
-    font-size: 16px;
-    padding: 8px 0;
-    border-bottom: 1px dashed rgba(255,255,255,0.1);
-    display: flex;
-    justify-content: space-between;
-}
-
-#settings div:last-of-type ul li:nth-child(1)::after { content: "видимий"; color: #fffb8f; }
-#settings div:last-of-type ul li:nth-child(2)::after { content: "приватний"; color: #fffb8f; }
-#settings div:last-of-type ul li:nth-child(3)::after { content: "для всіх"; color: #fffb8f; }
-
-  </style>
+</style>
 </head>
