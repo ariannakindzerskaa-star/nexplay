@@ -65,6 +65,55 @@ cursor: pointer;
 transition: background-color 0.2s,color 0.2s; 
 }
 
+nav ul li a:hover,
+nav ul li a button:hover,
+nav ul li .active {
+  background-color: #6346bf;
+}
+
+main { 
+  flex: 1; 
+  background-color: #311b5e; 
+  padding: 40px; overflow-y: auto; 
+} 
+main section h2 { 
+  font-size: 32px; 
+  font-weight: 600; 
+  margin-bottom: 25px; 
+}
+
+.search-container,
+main section > div:has(input) {
+  display: flex; 
+  align-items: center; 
+  gap: 15px; 
+  margin-bottom: 25px; 
+} 
+
+main section label { 
+  font-size: 18px; 
+  color: #ffffff; 
+} 
+
+main section input[type="search"],
+main section input[type="text"] { 
+  background-color: #1a0933; 
+  border: 2px solid #6346bf; 
+  border-radius: 6px; 
+  padding: 10px 15px; 
+  color: #ffffff; 
+  width: 280px; 
+  font-size: 16px; 
+  outline: none; 
+}
+
+.screen {
+  display: none;
+}
+
+.screen.active-screen {
+  display: block;
+}
 
 
   </style>
