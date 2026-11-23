@@ -1150,3 +1150,10 @@ document.querySelector(".profile").addEventListener("click", () => {
 });
 
 render();
+
+const libraryBtn = document.getElementById("library-btn");
+if (libraryBtn) {
+  libraryBtn.addEventListener("click", () => {
+    gtag("event", "click_library_btn");
+  });
+}
